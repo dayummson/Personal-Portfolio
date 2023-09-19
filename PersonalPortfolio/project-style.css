@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: monospace;
+  font-weight: bolder;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: rgb(224, 238, 174);
+  background: radial-gradient(
+    circle,
+    rgba(224, 238, 174, 1) 8%,
+    rgba(148, 187, 233, 1) 100%
+  ); */
+
+  background: rgb(189, 75, 172);
+  background: radial-gradient(
+    circle,
+    rgba(189, 75, 172, 1) 0%,
+    rgba(170, 127, 200, 1) 0%,
+    rgba(122, 125, 197, 1) 47%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px;
+}
+
+.logo-resize {
+  width: 60px;
+  height: 60px;
+}
+
+.container {
+  position: relative;
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 280px);
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  /* box-shadow: 0 15px 35px rgba(255, 255, 255, 0.5); */
+  box-shadow: 0 15px 35px rgba(105, 105, 105, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  /* backdrop-filter: blur(10px); */
+}
+
+header {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  left: 20px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(61, 60, 60, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+header ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #8a2435;
+  padding: 8px 15px;
+  border-radius: 25px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+  margin-top: 100px;
+  transform: translateX(-100px);
+  max-width: 700px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  padding-left: 110px;
+}
+
+.details a {
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: monospace;
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(36, 33, 33);
+  font-weight: bolder;
+}
+
+.details h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  color: #8a2435;
+}
+
+.details p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #8a2435;
+}
+
+.details a {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #fff;
+  color: #8a2435;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.imgBox img {
+  max-width: 400px;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(70px);
+  }
+}
+
+.figure-resize {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 400px;
+  height: 400px;
+}
+
+/* Default styles for all screen sizes */
+/* ... (Your existing CSS code) ... */
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .details {
+    margin-top: 30px;
+    transform: none;
+    padding-left: 0;
+  }
+
+  .imgBox img {
+    max-width: 100%;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  header {
+    padding: 10px 20px;
+  }
+
+  header ul li {
+    margin: 0 5px;
+  }
+
+  .details {
+    padding: 20px;
+  }
+
+  .details h2 {
+    font-size: 2rem;
+  }
+
+  .details p {
+    font-size: 1rem;
+  }
+
+  .details a {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
